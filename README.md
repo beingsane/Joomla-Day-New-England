@@ -20,5 +20,5 @@ Further development of the template to include more functionality such as collap
 ## <a href="https://github.com/betweenbrain/Joomla-Day-New-England/tree/master/step-5">/step-5</a>
 More advanced development of the template to include dynamically adding body classes, template parameters, external PHP files.
 
-# Get your<a href="http://www.joomladaynewengland.org/images/homeslides/header-graphic.jpg">Jooooooooooooooooooomla</a> on!
+# Get your <a href="http://www.joomladaynewengland.org/images/homeslides/header-graphic.jpg">Jooooooooooooooooooomla</a> on!
 
