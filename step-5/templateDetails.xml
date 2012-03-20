@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+    <!-- template name is also used for directory name -->
+	<name>step-5</name>
+
+	<!-- non-essential, but recommended tags -->
+	<creationDate>March 3rd, 2012</creationDate>
+	<author>Matt Thomas</author>
+	<copyright>Copyright (C) 2012 Matt Thomas. All rights reserved.</copyright>
+	<authorEmail>matt@betweenbrain.com</authorEmail>
+	<authorUrl>http://betweenbrain.com/</authorUrl>
+	<version>0.1</version>
+
+	<files>
+	    <!-- folder tag loads everything in that folder -->
+		<folder>img</folder>
+		<!-- filename in a sub-directory will also create that directory -->
+		<filename>css/screen.css</filename>
+		<!-- filename tag loads only the specific file listed -->
+		<filename>favicon.ico</filename>
+		<filename>favicon.png</filename>
+		<filename>index.php</filename>
+		<filename>logic.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>footer</position>
+		<position>message</position>
+		<position>position-7</position>
+	</positions>
+
+
+    <config>
+		<fields name="params">
+			<fieldset name="general" >
+				<field name="setGeneratorTag" type="text" default="The Bulletproof Pretzel Company | http://www.simplebits.com/publications/bulletproof/code/" label="Generator Meta Tag" description="Customize the generator meta tag output by your template." size="56" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
+
