@@ -6,7 +6,7 @@
     <title>Bulletproof Pretzel Company</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/screen.css" />
-    <jdoc:include type="head" />
+<jdoc:include type="head" />
 </head>
 
 <body>

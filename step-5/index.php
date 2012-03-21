@@ -19,7 +19,7 @@ if(JFile::exists($logicFile)) {
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <jdoc:include type="head" />
+<jdoc:include type="head" />
 </head>
 
 <body class="<?php echo $columnLayout; ?>" >

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="2.5" type="template" client="site">
-    <!-- template name is also used for directory name -->
+<extension version="2.5" type="template" client="site" method="upgrade">
+
 	<name>step-4</name>
 
-	<!-- non-essential, but recommended tags -->
 	<creationDate>March 3rd, 2012</creationDate>
 	<author>Matt Thomas</author>
 	<copyright>Copyright (C) 2012 Matt Thomas. All rights reserved.</copyright>
@@ -13,11 +12,8 @@
 	<version>0.1</version>
 
 	<files>
-	    <!-- folder tag loads everything in that folder -->
 		<folder>img</folder>
-		<!-- filename in a sub-directory will also create that directory -->
-		<filename>css/screen.css</filename>
-		<!-- filename tag loads only the specific file listed -->
+		<folder>css</folder>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
