@@ -33,13 +33,13 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/screen.css','text/css
 	<div id="message">
 		<jdoc:include type="modules" name="position-12" />
 	</div>
-	<?php endif; ?>
+	<?php endif ?>
 
 	<?php if ($this->countModules('position-1')) : ?>
 	<div id="nav">
 	<jdoc:include type="modules" name="position-1" />
 	</div>
-	<?php endif; ?>
+	<?php endif ?>
 
 	<div id="content">
 		<div class="gutter">
@@ -56,7 +56,7 @@ $doc->addStyleSheet('templates/' . $this->template . '/css/screen.css','text/css
 			<jdoc:include type="modules" name="position-7" style="xhtml"/>
 		</div>
 	</div>
-	<?php endif; ?>
+	<?php endif ?>
 
 	<div id="footer">
 		<jdoc:include type="modules" name="footer" style="xhtml"/>
