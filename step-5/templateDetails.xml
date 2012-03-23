@@ -5,15 +5,54 @@
 	<name>step-5</name>
 
 	<creationDate>March 3rd, 2012</creationDate>
-	<author>Matt Thomas</author>
+	<author>Barb Ackemann | Matt Thomas</author>
 	<copyright>Copyright (C) 2012 Matt Thomas. All rights reserved.</copyright>
-	<authorEmail>matt@betweenbrain.com</authorEmail>
-	<authorUrl>http://betweenbrain.com/</authorUrl>
+	<authorEmail>barb@irislines.com | matt@betweenbrain.com</authorEmail>
+	<authorUrl>http://irislines.com/ | http://betweenbrain.com/</authorUrl>
 	<version>0.1</version>
+	<description><![CDATA[
+	<style type="text/css">
+		.panel {background: #ddd;
+		background-image: -moz-linear-gradient(100% 100% 90deg, rgba(225,225,225,1), rgba(255,255,255,1));
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,1)), to(rgba(225,225,225,1)));
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd');
+		-moz-border-radius: 2px 12px 2px 2px;
+		-webkit-border-radius: 2px 12px 2px 2px;
+		border-radius: 2px 12px 2px 2px;
+		-moz-box-shadow: 1px 1px 2px #ddd;
+		-webkit-box-shadow: 1px 1px 2px #ddd;
+		border-box-shadow: 1px 1px 2px #ddd;
+		border: 1px solid #ccc;
+		padding: 6px 10px;
+		color: #444;
+		text-decoration: none;}
+		table.admintable td.paramlist_key {font-weight:normal;text-transform:uppercase;text-align:left;}
+		table.admintable td.paramlist_value label {text-transform:none;}
+		table.admintable td.key, table.admintable td.paramlist_key,.pane-sliders .content,.pane-sliders .panel h3, div.panel fieldset {background:none;}
+		div.panel fieldset {margin-bottom:0;padding-bottom:0;}
+		table.admintable td.key, table.admintable td.paramlist_key {border:none;}
+	</style>
+	<a href="http://www.joomladaynewengland.org/" target="_blank"><img src="http://community.joomla.org/images/4674411983_89b5d0b50f.jpg"></a>
+	<p>As always, Joomla Day New England will be filled with interesting talks, terrific networking, and new ideas. This year we're focusing on mobile, templating, e-commerce, content construction kits (CCKs), and migrating Joomla 1.5 to 2.5. We'll even have a talk on Drupal, so you can get more familiar with the similarities and differences with Joomla.</p>
+	<h2 style="clear:left">Template Workshop</h2>
+<p>Are you a master of HTML and CSS ready to dive into converting your artfully created masterpieces into Joomla templates? Have you ever wondered what <code>jdoc:include</code> means, or why a Joomla template has both index.php and index.html files in it? If so, then this workshop is for you.</p>
+<p>For three fun-filled hours (or until the coffee runs out, or we get escorted from the building) Barb Ackemann and Matt Thomas will lead you into the adventure that is creating Joomla templates. The first half of the workshop will begin by introducing you to the fundamental basics of what a template must have by converting a simple HTML mock-up into a Joomla template. You'll be surprised by how simple it can be. We will then progressivly develop this template to include additonal basic features and functionality, all the while explaining the various asects of the code to empower you with the fundational knowledge you need to take this adventure into whatever direction you decide to go in.</p>
+<p>Before a short dinner break, we will ask you to decide on the direction for the second half. We can continue as one large group, or break into two smaller groups, and:</p>
+<ul>
+<li>Continue with the progressive development of our template to include more advanced features and functionality</li>
+<li>Learn about the <a href="http://construct-framework.com/">Construct Template Development Framework</a></li>
+<li>Discuss the power of overriding Joomla's core with template overrides</li>
+<li>Strategies for customizing a commercial template</li>
+<li>Some or all of the above</li>
+<li>Something else?</li>
+</ul>
+<p>Participants are encouraged to attend with notebook computers at the ready with an AMP stack (LAMP, XAMPP, MAMP..etc), the latest version of Joomla installed (2.5.x), and your favorite code editor or IDE. Example files will be distributed on site as well as via Github at <a href="https://github.com/betweenbrain/Joomla-Day-New-England">https://github.com/betweenbrain/Joomla-Day-New-England</a></p>
+	]]></description>
 
 	<files>
-		<folder>img</folder>
 		<folder>css</folder>
+		<folder>img</folder>
+		<folder>html</folder>
 		<filename>favicon.ico</filename>
 		<filename>favicon.png</filename>
 		<filename>index.php</filename>
@@ -23,15 +62,16 @@
 
 	<positions>
 		<position>footer</position>
-		<position>message</position>
+		<position>position-1</position>
+		<position>position-12</position>
 		<position>position-7</position>
 	</positions>
 
     <!-- parameters -->
     <config>
 		<fields name="params">
-			<fieldset name="general" >
-				<field name="setGeneratorTag" type="text" default="The Bulletproof Pretzel Company | http://www.simplebits.com/publications/bulletproof/code/" label="Generator Meta Tag" description="Customize the generator meta tag output by your template." size="56" />
+			<fieldset name="basic" >
+				<field name="setGeneratorTag" type="text" default="The Bulletproof Pretzel Company | http://www.simplebits.com/publications/bulletproof/code/" label="Generator Meta Tag" description="Customize the generator meta tag output by your template." size="96" />
 			</fieldset>
 		</fields>
 	</config>

@@ -26,7 +26,7 @@ $doc->addStyleDeclaration(' body {font-family: "Ubuntu", serif;}');
  * Sample parameter functions
  */
 
- // Create shortcut to parameter for convienence
+ // Create shortcut to parameter for convenience
 $setGeneratorTag	= htmlspecialchars($this->params->get('setGeneratorTag'));
 // Change generator tag
 $this->setGenerator($setGeneratorTag);

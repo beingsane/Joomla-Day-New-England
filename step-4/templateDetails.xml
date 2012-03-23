@@ -5,22 +5,23 @@
 	<name>step-4</name>
 
 	<creationDate>March 3rd, 2012</creationDate>
-	<author>Matt Thomas</author>
+	<author>Barb Ackemann | Matt Thomas</author>
 	<copyright>Copyright (C) 2012 Matt Thomas. All rights reserved.</copyright>
-	<authorEmail>matt@betweenbrain.com</authorEmail>
-	<authorUrl>http://betweenbrain.com/</authorUrl>
+	<authorEmail>barb@irislines.com | matt@betweenbrain.com</authorEmail>
+	<authorUrl>http://irislines.com/ | http://betweenbrain.com/</authorUrl>
 	<version>0.1</version>
 
 	<files>
-		<folder>img</folder>
 		<folder>css</folder>
+		<folder>img</folder>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
 
 	<positions>
 		<position>footer</position>
-		<position>message</position>
+		<position>position-1</position>
+		<position>position-12</position>
 		<position>position-7</position>
 	</positions>
 

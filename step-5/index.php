@@ -10,7 +10,7 @@ jimport('joomla.filesystem.file');
 // Create an absolute path to your included file for security reasons
 $logicFile = JPATH_THEMES. '/' . $this->template . '/logic.php';
 
-// Load the file conditonally to avoid fatal erros is it is missing
+// Load the file conditionally to avoid fatal errors if it is missing
 if(JFile::exists($logicFile)) {
 	include $logicFile;
 }
