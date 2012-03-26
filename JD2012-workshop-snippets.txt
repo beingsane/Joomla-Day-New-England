@@ -1,0 +1,246 @@
+Snippets of code used in the Template Workshop at JoomlaDay New England, March 30, 2012
+*******
+Step 2:
+*******
+Add at top of head:
+
+	<?php defined( '_JEXEC' ) or die; ?>
+*********************************************************
+Create dynamic <link> tag to the stylesheet:
+
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/screen.css" />
+*********************************************************
+Insert modules in place of the mockup text:
+
+	<jdoc:include type="modules" name="position-name"/>
+*********************************************************
+Include main component:
+
+	<jdoc:include type="component" />
+*********************************************************
+Create a templateDetails.xml file:
+
+This code is a good starting point which can be added to:
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+	<extension version="2.5" type="template" client="site" method="upgrade">
+		<!-- template name is also used for directory name -->
+	<name>template-name</name>
+
+	<files>
+	<!-- folder tag installs everything in that folder -->
+	<folder>img</folder>
+	<!-- filename in a sub-directory will also create that directory -->
+	<filename>css/screen.css</filename>
+	<!-- filename tag installs only the specific file listed -->
+	<filename>index.php</filename>
+	<filename>templateDetails.xml</filename>
+	</files>
+
+	</extension>
+*********************************************************
+*******
+Step 3:
+*******
+Add this to with <head> tag of index.php to render Joomla's head elements.
+
+	<jdoc:include type="head" />
+*********************************************************
+Include in your index.php  so that system messages (wrong password,  changes saved, etc.) can be displayed:
+
+	<jdoc:include type="message" />
+*********************************************************
+Add a module position for the footer -- Note the addition of style="xhtml" which is also added to other module code.
+
+	<jdoc:include type="modules" name="footer" style="xhtml" />
+*********************************************************
+Add module positions to templateDetails.xml:
+
+	<!-- Listed during module assignment -->
+	<positions>
+	<position>footer</position>
+	<position>position-7</position>
+	</positions>
+*********************************************************
+Other good stuff to add to templateDetails.xml:
+
+	<!-- non-essential, but recommended tags -->
+	<creationDate>March 3rd, 2012</creationDate>
+	<author>Barb Ackemann | Matt Thomas</author>
+	<copyright>Copyright (C) 2012 Matt Thomas. All rights reserved.</copyright>
+	<authorEmail>barb@irislines.com | matt@betweenbrain.com</authorEmail>
+	<authorUrl>http://irislines.com/ | http://betweenbrain.com/</authorUrl>
+	<version>0.1</version>
+	<!-- end non-essential, but recommended tags -->
+*********************************************************
+
+*******
+Step 4
+*******
+Expand the opening php block to use Joomla framework:
+
+	<?php defined( '_JEXEC' ) or die;
+
+	// To enable use of site configuration
+	$app = JFactory::getApplication();
+	// Returns a reference to the global document object
+	$doc = JFactory::getDocument();
+	// Load our stylesheet using the Joomla framework
+	$doc->addStyleSheet('templates/' . $this->template . '/css/screen.css','text/css','screen');
+
+	// Other examples:
+	// $doc->addCustomTag('<meta name="author" content="Matt Thomas, matt@betweenbrain.com" />');
+	// $doc->addFavicon('templates/' . $this->template . '/favicon.png','image/png','shortcut icon');
+	// $doc->addScript('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+	// $doc->addStyleSheet('http://fonts.googleapis.com/css?family=ubuntu');
+	// $doc->addStyleDeclaration(' body {font-family: "Ubuntu", serif;}');
+	?>
+*********************************************************
+Render the site title from Global Configuration:
+
+	<h1 id="logo"><a href="<?php echo $this->baseurl ?>/" title="<?php echo htmlspecialchars($app->getCfg('sitename')) ?>"><?php echo htmlspecialchars($app->getCfg('sitename')) ?></a></h1>
+*********************************************************
+Simple Conditional to Insert module and surrounding html only if there is a module published for this page::
+
+	<?php if($this->countModules('left')) : ?>
+	<!-- optional HTML here -->
+	<jdoc:include type="modules" name="left" style="xhtml" />
+	<!-- optional HTML here -->
+	<?php endif; ?>
+*********************************************************
+Not used in our demonstration, but you might have reason to use this structure:
+
+If/else Conditional:
+
+	<?php if($this->countModules('right')) : ?>
+	<!-- optional HTML here -->
+	<jdoc:include type="modules" name="right" style="xhtml" />
+	<!-- optional HTML here -->
+	<?php else : ?>
+	<!-- Add your ELSE Code Here -->
+	<?php endif; ?>
+*********************************************************
+
+*******
+Step 5
+*******
+
+Adding parameters to your template:
+
+	<config>
+		<fields name="params">
+			<fieldset name="general" >
+				<field name="setGeneratorTag" type="text" default="The Bulletproof Pretzel Company | http://www.simplebits.com/publications/bulletproof/code/" label="Generator Meta Tag" description="Customize the generator meta tag output by your template." size="56" />
+			</fieldset>
+		</fields>
+	</config>
+
+
+Modify opening php to load parameter value
+
+	JHTML::_('behavior.framework', true):
+	//get params
+	 // Create shortcut to parameter for convenience
+	$setGeneratorTag = htmlspecialchars($this->params->get('setGeneratorTag'));
+	// Change generator tag
+	$this->setGenerator($setGeneratorTag);
+
+
+Modify html to make use of the parameter variable:
+
+	<?php if ($navposition=='top'): ?>
+	<div id="search">
+	<jdoc:include type="modules" name ="position-0" style="xhtml" />
+	</div>
+	<div id="topnav">
+	<jdoc:include type="modules" name ="position-7" style="xhtml" />
+	</div>
+	<?php endif; ?>
+
+****************
+Bonus Snippets:
+****************
+From purple IrisLines CheatSheet:
+
+Styling by the Top Level Nav Item
+
+Include in opening php block of index.php
+
+	$menu = JFactory::getApplication()->getMenu();
+	$active = $menu->getActive() ;
+	$top = $active ? $menu->getItem($active->tree[0]) : null;
+
+Include in body of index.php on the outer containing div:
+
+	<div id="wrap"  class="<?php echo $top->alias; ?>">
+	</div>
+*********************************************************
+Style pages based on which component is loading
+
+Add this to opening php block:
+
+	$pageoption = JRequest::getCmd( 'option', '');
+
+and then add class of $pageoption to containing div:
+
+	<div id="wrap" class= "<?php echo $pageoption; ?>">
+
+*********************************************************
+Miscellaneous CSS
+
+Gilder-Levin Image Replacement:
+
+The CSS:
+
+	#header {
+		width: 329px;
+		height: 25px;
+		position: relative;
+		}
+	#header span {
+		background: url(sample-opaque.gif) no-repeat;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		}
+
+The HTML:
+
+	<h3 id="header">
+		<span></span>Revised Image Replacement
+	</h3>
+*********************************************************
+
+Centered Horizontal Nav Bar CSS
+ http://matthewjamestaylor.com/blog/beautiful-css-centered-menus-no-hacks-full-cross-browser-support
+
+	#main-nav {
+	   float:left;
+	   width:100%;
+	   background:#fff;
+	   border-bottom:4px solid #000;
+	   overflow:hidden;
+	   position:relative;
+	}
+	#main-nav ul {
+	   clear:left;
+	   float:left;
+	   list-style:none;
+	   margin:0;
+	   padding:0;
+	   position:relative;
+	   left:50%;
+	   text-align:center;
+	}
+	#main-nav ul li {
+	   display:block;
+	   float:left;
+	   list-style:none;
+	   margin:0;
+	   padding:0;
+	   position:relative;
+	   right:50%;
+	}
+*********************************************************
+
