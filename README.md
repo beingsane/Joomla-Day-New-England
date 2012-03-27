@@ -30,6 +30,8 @@ More advanced development of the template to include dynamically adding body cla
 ## Downloading
 The easiest way to get stared with these files is to download them pre-bundled with Joomla! 2.5.3 at <a href="https://github.com/betweenbrain/Joomla-Day-New-England/downloads">https://github.com/betweenbrain/Joomla-Day-New-England/downloads</a>. Simply extract the file from the archive and install it like you would any Joomla! installation.
 
+The Super User account information is admin:admin
+
 You can also download just this code at <a href="https://github.com/betweenbrain/Joomla-Day-New-England/zipball/master">https://github.com/betweenbrain/Joomla-Day-New-England/zipball/master</a>. Once downloaded, extract the files into your `/templates` directory.
 
 ## Cloning
