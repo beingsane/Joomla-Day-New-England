@@ -27,15 +27,17 @@ More advanced development of the template to include dynamically adding body cla
 
 # Getting started
 
+## Downloading
+The easiest way to get stared with these files is to download them pre-bundled with Joomla! 2.5.3 at <a href="https://github.com/betweenbrain/Joomla-Day-New-England/downloads">https://github.com/betweenbrain/Joomla-Day-New-England/downloads</a>. Simply extract the file from the archive and install it like you would any Joomla! installation.
+
+You can also download just this code at <a href="https://github.com/betweenbrain/Joomla-Day-New-England/zipball/master">https://github.com/betweenbrain/Joomla-Day-New-England/zipball/master</a>. Once downloaded, extract the files into your `/templates` directory.
+
 ## Cloning
 To clone this entire repo into an existing Joomla installing, open the templates directory in your terminal and run the following commands:
 
 	- `git init`
 	- `git remote add origin git@github.com:betweenbrain/Joomla-Day-New-England.git`
 	- `git pull origin master`
-
-## Downloading
-You can also download this code at <a href="https://github.com/betweenbrain/Joomla-Day-New-England/zipball/master">https://github.com/betweenbrain/Joomla-Day-New-England/zipball/master</a>. Once downloaded, extract the files into your `/templates` directory.
 
 ## Installing
 Once you have these files in your `/templates` directory, using either method, , go to Extensions -> Extension Manager -> Discover and click the Discover button. Check off the check marks next to step-2 through step-4, click install.
