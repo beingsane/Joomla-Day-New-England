@@ -5,11 +5,11 @@
 	<name>step-2</name>
 
 	<files>
-	    <!-- folder tag loads everything in that folder -->
+	    <!-- folder tag installs everything in that folder -->
 		<folder>img</folder>
 		<!-- filename in a sub-directory will also create that directory -->
 		<filename>css/screen.css</filename>
-		<!-- filename tag loads only the specific file listed -->
+		<!-- filename tag installs only the specific file listed -->
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
 	</files>

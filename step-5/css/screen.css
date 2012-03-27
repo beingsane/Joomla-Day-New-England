@@ -19,6 +19,17 @@ a:visited {
 	max-width: 1400px;
 	}
 
+#content {
+	float: left;
+	font-size: 95%;
+	color: #333;
+	line-height: 1.5em;
+	}
+#footer {
+	clear: both;
+	background: #828377 url(../img/footer-bg.gif) repeat-x top left;
+	}
+
 /* Dynamic Body Class Exmaple */
 .main-only	#content {
     width:100%;
@@ -34,20 +45,6 @@ a:visited {
 .column-1-main	#wrap {
 	background: url(../img/wrap-bg.gif) repeat-y 70% 0;
 }
-/* End Dynamic Body Class Exmaple */
-
-
-
-#content {
-	float: left;
-	font-size: 95%;
-	color: #333;
-	line-height: 1.5em;
-	}
-#footer {
-	clear: both;
-	background: #828377 url(../img/footer-bg.gif) repeat-x top left;
-	}
 
 /* gutters */
 
@@ -75,25 +72,43 @@ a:visited {
 	}
 
 /* nav bar */
+
 #nav {
-       width:100%;
-       background-color:#B4E637;
-       padding:0;
+	float:left;
+	width:100%;
+	background:#B4E637;
+	border-bottom:4px solid #000;
+	overflow:hidden;
+	position:relative;
 }
 #nav ul {
-       list-style-type:none;
-       margin:0 0 0 38%;
-       padding:0;
-       overflow:auto;}
+	clear:left;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	left:50%;
+	text-align:center;
+}
 #nav ul li {
-       float:left;
-       line-height:2.4;}
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	right:50%;
+}
 #nav ul li a {
-       text-decoration:none;
-       padding:7px 10px;
-       color:#374C0E;}
+	text-decoration:none;
+	padding:7px 10px;
+	color:#374C0E;
+	line-height:2.4;
+}
 #nav ul li a:hover {
-       background-color:#cc9;}
+	background-color:#cc9;
+}
 
 /* message row */
 
